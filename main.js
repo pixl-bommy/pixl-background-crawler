@@ -1,6 +1,7 @@
-const { app, BrowserWindow } = require("electron");
+const { app, BrowserWindow, Tray } = require("electron");
 
 let mainWindow = null;
+let mainTray = null;
 
 /**
  * Create a new main window and open index.html.
@@ -43,4 +44,8 @@ app.on("activate", () => {
 /**
  * Initial create the main window on app start up.
  */
-app.on("ready", createWindow);
+app.on("ready", ()=>{
+    mainTray = new Tray("./public/icon.jpg");
+    mainTray.setTitle("pixl Background Crawler");
+    createWindow();
+});
