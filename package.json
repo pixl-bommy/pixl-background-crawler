@@ -5,11 +5,13 @@
     "main": "main.js",
     "scripts": {
         "start": "electron .",
+        "build:win": "electron-packager ./ background-crawler --platform=win32 --arch=ia32,x64 --out=dist/ --overwrite",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "Thomas Borck",
     "license": "ISC",
     "devDependencies": {
-        "electron": "^7.0.0"
+        "electron": "^7.0.0",
+        "electron-packager": "^14.0.6"
     }
 }
