@@ -1,5 +1,7 @@
 const { app, BrowserWindow, Tray } = require("electron");
 
+const path = require("path");
+
 let mainWindow = null;
 let mainTray = null;
 
@@ -20,7 +22,7 @@ const createWindow = () => {
     // destroy window reference, if window was closed
     mainWindow.on("closed", () => mainWindow = null);
 
-    mainWindow.loadFile("./public/index.html");
+    mainWindow.loadFile(path.join(__dirname, "/public/index.html"));
     mainWindow.webContents.openDevTools();
 }
 
@@ -33,6 +35,8 @@ app.on("window-all-closed", () => {
     app.quit();
 });
 
+app.on("renderer-process-crashed", () => app.quit());
+
 /**
  * Create the main window on macOS, after the app was 'paused' and reactivated.
  */
@@ -44,8 +48,8 @@ app.on("activate", () => {
 /**
  * Initial create the main window on app start up.
  */
-app.on("ready", ()=>{
-    mainTray = new Tray("./public/icon.jpg");
+app.on("ready", () => {
+    mainTray = new Tray(path.join(__dirname, "public/icon.jpg"));
     mainTray.setTitle("pixl Background Crawler");
     createWindow();
 });
