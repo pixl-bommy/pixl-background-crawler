@@ -1,0 +1,15 @@
+{
+    "name": "background-crawler",
+    "version": "1.0.0-alpha",
+    "description": "A little tool to watch and process a folder and it's content.",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron .",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Thomas Borck",
+    "license": "ISC",
+    "devDependencies": {
+        "electron": "^7.0.0"
+    }
+}
