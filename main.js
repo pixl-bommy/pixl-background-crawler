@@ -22,7 +22,7 @@ const createWindow = () => {
     // destroy window reference, if window was closed
     mainWindow.on("closed", () => mainWindow = null);
 
-    mainWindow.loadFile(path.join(__dirname, "/public/index.html"));
+    mainWindow.loadFile(path.join(__dirname, "/index.html"));
     mainWindow.webContents.openDevTools();
 }
 
@@ -49,7 +49,7 @@ app.on("activate", () => {
  * Initial create the main window on app start up.
  */
 app.on("ready", () => {
-    mainTray = new Tray(path.join(__dirname, "public/icon.jpg"));
+    mainTray = new Tray(path.join(__dirname, "/assets/app-icon/icon.jpg"));
     mainTray.setTitle("pixl Background Crawler");
     createWindow();
 });
