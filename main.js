@@ -18,6 +18,7 @@ const createWindow = () => {
     };
 
     mainWindow = new BrowserWindow(windowPreferences);
+    mainWindow.autoHideMenuBar = true;
 
     // destroy window reference, if window was closed
     mainWindow.on("closed", () => mainWindow = null);
