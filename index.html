@@ -26,7 +26,7 @@
                 <span class="line"></span>
                 <span class="line"></span>
                 <span class="small">found</span>
-                <strong>0</strong>
+                <strong id="out-found">0</strong>
             </div>
             <div class="item">
                 <span class="line"></span>
@@ -34,7 +34,7 @@
                 <span class="line"></span>
                 <span class="line"></span>
                 <span class="small">done</span>
-                <strong>0</strong>
+                <strong id="out-done">0</strong>
             </div>
             <div class="item">
                 <span class="line"></span>
@@ -42,10 +42,14 @@
                 <span class="line"></span>
                 <span class="line"></span>
                 <span class="small">failed</span>
-                <strong>0</strong>
+                <strong id="out-failed">0</strong>
             </div>
         </div>
     </div>
+
+    <script>
+        require("./src-renderer/index.renderer");
+    </script>
 </body>
 
 </html>

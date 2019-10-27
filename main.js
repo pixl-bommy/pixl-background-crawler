@@ -2,6 +2,8 @@ const { app, BrowserWindow, Tray } = require("electron");
 
 const path = require("path");
 
+const startWatcher = require("./src-main/index.watcher");
+
 let mainWindow = null;
 let mainTray = null;
 
@@ -53,4 +55,5 @@ app.on("ready", () => {
     mainTray = new Tray(path.join(__dirname, "/assets/app-icon/icon.jpg"));
     mainTray.setTitle("pixl Background Crawler");
     createWindow();
+    startWatcher(mainWindow);
 });
