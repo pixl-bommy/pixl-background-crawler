@@ -8,7 +8,11 @@
   --color-link:     hsl(0,0%,22%);
 
   --color-border:   hsl(0,0%,88%);
-  --color-bg:       hsl(0,0%,96%);
+  --color-bg:       #2c3e50;
 
   --color-accent:   black; /* Fallback */
+
+  --color-bg-row:   #778ca3;
+
+  --spacing:        8px;
 }

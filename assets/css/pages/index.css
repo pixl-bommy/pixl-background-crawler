@@ -1,0 +1,79 @@
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    padding: var(--spacing);
+}
+
+.container .header {
+    position: relative;
+    margin: var(--spacing);
+    margin-bottom: 0;
+    padding: var(--spacing);
+    padding-bottom: 0;
+    text-align: left;
+    font-size: 2em;
+    color: #fff;
+    width: 100%;
+}
+
+.container .item {
+    position: relative;
+    flex-grow: 1;
+    margin: var(--spacing);
+    padding: var(--spacing);
+    text-align: center;
+    font-size: 2em;
+    color: #fff;
+}
+
+.container .item > * {
+    display: block;
+}
+
+.container .item .small {
+    font-size: 0.6em;
+    opacity: 0.6;
+}
+
+/* Item borders */
+.container .item span.line:nth-child(1) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 2px;
+    background: linear-gradient(to right, #7f8c8d00, #7f8c8d);
+}
+
+.container .item span.line:nth-child(2) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40%;
+    height: 2px;
+    background: linear-gradient(to left, #7f8c8d00, #7f8c8d);
+}
+
+.container .item span.line:nth-child(3) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2px;
+    height: 40%;
+    background: linear-gradient(to top, #7f8c8d00, #7f8c8d);
+}
+
+.container .item span.line:nth-child(4) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 2px;
+    height: 40%;
+    background: linear-gradient(to bottom, #7f8c8d00, #7f8c8d);
+}

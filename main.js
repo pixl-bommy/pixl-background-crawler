@@ -10,8 +10,8 @@ let mainTray = null;
  */
 const createWindow = () => {
     const windowPreferences = {
-        width: 960,
-        height: 600,
+        width: 800,
+        height: 300,
         webPreferences: {
             nodeIntegration: true,
         },
